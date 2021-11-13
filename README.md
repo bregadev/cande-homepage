@@ -1,2 +1,2 @@
 # cande-homepage
-simple splash page for local small business. 
+Simple splash page for local small business. 
