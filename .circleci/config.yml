@@ -18,23 +18,19 @@ jobs:
           paths:
             - project/build
   s3-ls:
-    working_directory: ./cande-homepage/
-    # context: aws-context
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: circleci/node
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    machine:
+      image: circleci/classic:latest
     steps:
+      - checkout
       - attach_workspace:
-          at: ./
-      - run:
-          name: "Ls the bucket"
-          command: aws s3 sync ./cande-homepage/build/ s3://cande-homepage-dev --delete
-
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+          at: ~/
+      - aws-s3/sync:
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+          from: build
+          to: 's3://cande-homepage-dev'
+          overwrite: true # default is false
 workflows:
   say-hello-workflow:
     jobs:
