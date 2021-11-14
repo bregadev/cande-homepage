@@ -7,7 +7,7 @@ version: 2.1
 jobs:
   s3-ls:
 <<<<<<< HEAD
-    working_directory: ./cande-homepage/
+    # working_directory: ./cande-homepage/
 =======
 >>>>>>> 048c206f4bffb815ac7434022de4e619316a3bdc
     # context: aws-context
