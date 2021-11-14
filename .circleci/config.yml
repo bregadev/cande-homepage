@@ -5,7 +5,7 @@ orbs:
 jobs:
   s3-ls:
     docker:
-      image: amazon/aws-cli
+      image: amazon/awcli
     steps:
       - checkout
       - run:
