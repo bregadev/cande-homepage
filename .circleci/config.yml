@@ -14,9 +14,9 @@ jobs:
             - run: npm test
       - run: npm run build
       - persist_to_workspace:
-          root: ~/
+          root: /Users/sitobrega/it/Coding/Projects/react/cande/cande-homepage/
           paths:
-            - cande-homepage/cande-homepage
+            - cande-homepage/
   s3-ls:
     machine:
       image: circleci/classic:latest
@@ -28,7 +28,7 @@ jobs:
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
-          from: build
+          from: ./buildpw
           to: 's3://cande-homepage-dev'
           # overwrite: true # default is falses
 workflows:
