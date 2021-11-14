@@ -9,8 +9,7 @@ jobs:
     steps:
       - checkout
       - name: sync bucket
-        command:
-          aws s3 sync /Users/sitobrega/it/Coding/Projects/react/cande/cande-homepage/cande-homepage/build s3://cande-homepage-dev
+        command: aws s3 sync /Users/sitobrega/it/Coding/Projects/react/cande/cande-homepage/cande-homepage/build s3://cande-homepage-dev
           
 workflows:
   say-hello-workflow:
