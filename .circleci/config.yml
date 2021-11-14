@@ -16,7 +16,7 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
-            - cande-homepage/cande-homepage/
+            - cande-homepage/cande-homepage/public/
   s3-ls:
     machine:
       image: circleci/classic:latest
@@ -28,7 +28,7 @@ jobs:
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
-          from: ./public/
+          from: .
           to: 's3://cande-homepage-dev'
           
 workflows:
