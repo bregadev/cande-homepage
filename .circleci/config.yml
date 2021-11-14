@@ -23,12 +23,12 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ~/temp
+          at: ~/
       - aws-s3/sync:
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
-          from: ~/temp/build
+          from: ~/build
           to: 's3://cande-homepage-dev'
           # overwrite: true # default is falses
 workflows:
