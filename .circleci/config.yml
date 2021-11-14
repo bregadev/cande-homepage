@@ -14,7 +14,7 @@ jobs:
             - run: npm test
       - run: npm run build
       - persist_to_workspace:
-          root: /Users/sitobrega/it/Coding/Projects/react/cande/cande-homepage/
+          root: ./
           paths:
             - cande-homepage/
   s3-ls:
