@@ -3,10 +3,10 @@
 version: 2.1
 
 # Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+# See: https://circleci.com/docs/2.0/configuration-reference/#jobs.
 jobs:
   s3-ls:
-    # working_directory: ./cande-homepage/
+    working_directory: ./cande-homepage/
     # context: aws-context
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
