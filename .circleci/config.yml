@@ -30,7 +30,7 @@ jobs:
             --cache-control "max-age=86400"
           from: build
           to: 's3://cande-homepage-dev'
-          overwrite: true # default is false
+          # overwrite: true # default is false
 workflows:
   say-hello-workflow:
     jobs:
