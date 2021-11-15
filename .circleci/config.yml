@@ -20,6 +20,7 @@ jobs:
       - node/with-cache:
           steps:
             - run: pwd
+            - run: ls 
             - run: cd /home/circleci/project/cande-homepage/
             - run: npm install
             - run: npm test
