@@ -4,8 +4,6 @@ orbs:
   aws-s3: circleci/aws-s3@3.0.0
 jobs:
   s3-ls:
-    docker:
-      - image: circleci/awscli
     steps:
       - checkout
       - run:
