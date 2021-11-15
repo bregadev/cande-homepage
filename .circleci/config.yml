@@ -13,8 +13,8 @@ jobs:
       #     root: /home
       #     paths:
       #       - ./
-      - run: pwd
-      - run: cd cande-homepage/
+      - run: ls /home/circleci/project
+      - run: cd /home/circleci/project/cande-homepage/
       - run: pwd
       - run: ls
       - node/with-cache:
