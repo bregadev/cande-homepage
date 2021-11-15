@@ -6,7 +6,7 @@ jobs:
   test-and-build:
     executor:
       name: node/default
-    working_directory: ~/
+    working_directory: ~/cande-homepage
     steps:
       - checkout
       # - persist_to_workspace:
@@ -19,6 +19,7 @@ jobs:
       - run: ls
       - node/with-cache:
           steps:
+            - run: pwd
             - run: cd /home/circleci/project/cande-homepage/
             - run: npm install
             - run: npm test
