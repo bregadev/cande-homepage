@@ -9,9 +9,9 @@ jobs:
     steps:
       - checkout
       - persist_to_workspace:
-          root: ./
-          paths:
-            - cande-homepage/cande-homepage/
+          root: .
+          # paths:
+          #   - cande-homepage/cande-homepage/
       - node/with-cache:
           steps:
             - run: npm install
