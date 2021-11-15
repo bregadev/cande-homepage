@@ -19,6 +19,7 @@ jobs:
       - run: ls
       - node/with-cache:
           steps:
+            - run: cd cande-homepage
             - run: pwd
             - run: ls 
             - run: cd cande-homepage
