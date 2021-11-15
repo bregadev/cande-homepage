@@ -24,8 +24,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: print wd
-        command: pwd
+      - run: pwd 
       - aws-s3/sync:
           arguments: |
             --acl public-read \
