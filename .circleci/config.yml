@@ -19,12 +19,6 @@ jobs:
       # - run: ls
       - node/with-cache:
           steps:
-            - run: pwd
-            - run: ls
-            - run: cd ./cande-homepage/cande-homepage
-            - run: pwd
-            - run: ls 
-            # - run: cd cande-homepage
             - run: npm install
             - run: npm test
       - run: npm run build
