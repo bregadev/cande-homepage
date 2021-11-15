@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
-  node: circleci/node@1.1.6
-  aws-s3: circleci/aws-cli@2.0.3
+  aws-cli: circleci/aws-cli@2.0.3
 jobs:
   s3-ls:
     executor: aws-cli/default
