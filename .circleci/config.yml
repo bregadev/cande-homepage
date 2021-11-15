@@ -16,7 +16,7 @@ jobs:
       - persist_to_workspace:
           root: ./
           paths:
-            - cande-homepage/cande-homepage/public/
+            - cande-homepage/cande-homepage/
   s3-ls:
     machine:
       image: circleci/classic:latest
