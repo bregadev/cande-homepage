@@ -24,7 +24,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: pwd 
+      - run: ls /home/circleci/project/
       - aws-s3/sync:
           arguments: |
             --acl public-read \
