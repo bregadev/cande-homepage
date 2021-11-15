@@ -13,6 +13,7 @@ jobs:
       #     root: /home
       #     paths:
       #       - ./
+      - run: pwd
       - run: cd cande-homepage/
       - run: pwd
       - run: ls
