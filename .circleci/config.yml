@@ -25,7 +25,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: /home/
-      - run: ls /home/circleci/project/
+      - run: ls /home/circleci/project/cande-homepage
       # - aws-s3/sync:
       #     arguments: |
       #       --acl public-read \
