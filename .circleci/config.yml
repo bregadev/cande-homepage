@@ -6,7 +6,7 @@ jobs:
   test-and-build:
     executor:
       name: node/default
-    # working_directory: ~/cande-homepage/cande-homepage/
+    working_directory: /home/circleci/project/cande-homepage/
     steps:
       - checkout
       # - persist_to_workspace:
