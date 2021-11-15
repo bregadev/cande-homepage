@@ -21,7 +21,7 @@ jobs:
           steps:
             - run: pwd
             - run: ls
-            - run: cd ./cande-homepage/
+            - run: cd ./cande-homepage/cande-homepage
             - run: pwd
             - run: ls 
             # - run: cd cande-homepage
