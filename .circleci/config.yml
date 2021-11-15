@@ -13,7 +13,7 @@ jobs:
       #     root: /home
       #     paths:
       #       - ./
-      - run: cd cande-homepage
+      - run: cd cande-homepage/cande-homepage
       - run: ls
       - node/with-cache:
           steps:
