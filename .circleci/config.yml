@@ -13,7 +13,7 @@ jobs:
       #     root: /home
       #     paths:
       #       - ./
-      - run: ls /home/circleci/project
+      # - run: ls /home/circleci/project
       - run: cd /home/circleci/project/cande-homepage/cande-homepage
       - run: pwd
       - run: ls
