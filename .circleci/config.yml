@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
          name: sync bucket
-         command: aws s3 sync /Users/sitobrega/it/Coding/Projects/react/cande/cande-homepage/cande-homepage/build s3://cande-homepage-dev -delete
+         command: "aws s3 sync /Users/sitobrega/it/Coding/Projects/react/cande/cande-homepage/cande-homepage/build s3://cande-homepage-dev --delete"
           
 workflows:
   say-hello-workflow:
