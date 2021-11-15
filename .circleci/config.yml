@@ -8,10 +8,10 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - persist_to_workspace:
-          root: /home
-          paths:
-            - ./
+      # - persist_to_workspace:
+      #     root: /home
+      #     paths:
+      #       - ./
       - node/with-cache:
           steps:
             - run: npm install
