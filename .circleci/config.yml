@@ -14,7 +14,7 @@ jobs:
       #     paths:
       #       - ./
       - run: ls /home/circleci/project
-      - run: cd /home/circleci/project/cande-homepage/
+      - run: cd /home/circleci/project/cande-homepage/cande-homepage
       - run: pwd
       - run: ls
       - node/with-cache:
