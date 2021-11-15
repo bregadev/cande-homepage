@@ -6,14 +6,15 @@ jobs:
   test-and-build:
     executor:
       name: node/default
-    working_directory: ~/cande-homepage/cande-homepage/
+    # working_directory: ~/cande-homepage/cande-homepage/
     steps:
       - checkout
       # - persist_to_workspace:
       #     root: /home
       #     paths:
       #       - ./
-      
+      - run: cd cande-homepage
+      - run: ls
       - node/with-cache:
           steps:
             - run: npm install
