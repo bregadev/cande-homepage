@@ -12,6 +12,7 @@ jobs:
       #     root: /home
       #     paths:
       #       - ./
+      working_directory: /home/circleci/project/cande-homepage
       - node/with-cache:
           steps:
             - run: npm install
