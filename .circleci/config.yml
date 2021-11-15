@@ -30,12 +30,13 @@ jobs:
       - attach_workspace:
           at: /home/
       - run: ls
-      - aws-s3/sync:
-          arguments: |
-            --acl public-read \
-            --cache-control "max-age=86400"
-          from: /home/circleci/project/build/
-          to: 's3://cande-homepage-dev'
+      - run: aws s3 sync ~/circleci/project/build/ s3://cande-homepage-dev --delete
+      # - aws-s3/sync:
+      #     arguments: |
+      #       --acl public-read \
+      #       --cache-control "max-age=86400"
+      #     from: /home/circleci/project/build/
+      #     to: 's3://cande-homepage-dev'
           
 workflows:
   say-hello-workflow:
