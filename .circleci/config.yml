@@ -29,13 +29,13 @@ jobs:
       - checkout
       - attach_workspace:
           at: /home/
-      - run: ls /home/circleci/project/cande-homepage
-      # - aws-s3/sync:
-      #     arguments: |
-      #       --acl public-read \
-      #       --cache-control "max-age=86400"
-      #     from: /home/circleci/project/cande-homepage/build/
-      #     to: 's3://cande-homepage-dev'
+      - run: pwd
+      - aws-s3/sync:
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+          from: /home/circleci/project/cande-homepage/build/
+          to: 's3://cande-homepage-dev'
           
 workflows:
   say-hello-workflow:
