@@ -43,4 +43,5 @@ workflows:
     jobs:
       - test-and-build
       - s3-ls
-        - requires: test-and-build
+          requires: 
+            - test-and-build
