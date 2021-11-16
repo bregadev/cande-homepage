@@ -19,8 +19,8 @@ jobs:
       # - run: ls
   
       - run: npm install
-      # - run: npm test
-    - run: npm run build
+      - run: npm test
+      - run: npm run build
     
   s3-ls:
     machine:
