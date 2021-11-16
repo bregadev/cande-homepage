@@ -30,7 +30,7 @@ jobs:
       - attach_workspace:
           at: /home/
       - run: ls
-      - run: aws s3 sync ~/project/build/ s3://cande-homepage-dev --delete
+      - run: aws s3 sync ~/project/public/ s3://cande-homepage-dev --delete
       # - aws-s3/sync:
       #     arguments: |
       #       --acl public-read \
